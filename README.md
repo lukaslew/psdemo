@@ -1,4 +1,0 @@
-psdemo
-======
-
-Sample web application based on play framework 2.1.1 with Selenium WebDriver tests
