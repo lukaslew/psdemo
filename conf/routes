@@ -5,5 +5,11 @@
 # Home page
 GET     /                           controllers.Application.index()
 
+GET      /person                    controllers.PersonController.getAll()
+GET      /person/:id                controllers.PersonController.get(id: Integer)
+POST     /person                    controllers.PersonController.create()
+POST     /person/:id                controllers.PersonController.update(id: Integer)
+DELETE   /person/:id                controllers.PersonController.delete(id: Integer)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
