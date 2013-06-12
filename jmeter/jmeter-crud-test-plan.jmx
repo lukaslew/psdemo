@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USERS" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1369386758000</longProp>
+        <longProp name="ThreadGroup.end_time">1369386758000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="INSERT_NAME_1" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_NAME_1</stringProp>
+              <stringProp name="Argument.value">Bolek</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INSERT_NAME_2" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_NAME_2</stringProp>
+              <stringProp name="Argument.value">Lolek</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INSERT_NAME_3" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_NAME_3</stringProp>
+              <stringProp name="Argument.value">Tola</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INSERT_GENDER_1" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_GENDER_1</stringProp>
+              <stringProp name="Argument.value">MALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INSERT_GENDER_2" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_GENDER_2</stringProp>
+              <stringProp name="Argument.value">MALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INSERT_GENDER_3" elementType="Argument">
+              <stringProp name="Argument.name">INSERT_GENDER_3</stringProp>
+              <stringProp name="Argument.value">FEMALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_NAME_1" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_NAME_1</stringProp>
+              <stringProp name="Argument.value">Radzim</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_NAME_2" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_NAME_2</stringProp>
+              <stringProp name="Argument.value">Maksymilian</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_NAME_3" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_NAME_3</stringProp>
+              <stringProp name="Argument.value">Justyn</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_GENDER_1" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_GENDER_1</stringProp>
+              <stringProp name="Argument.value">MALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_GENDER_2" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_GENDER_2</stringProp>
+              <stringProp name="Argument.value">MALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPDATE_GENDER_3" elementType="Argument">
+              <stringProp name="Argument.name">UPDATE_GENDER_3</stringProp>
+              <stringProp name="Argument.value">MALE</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="BASE_URL" elementType="Argument">
+              <stringProp name="Argument.name">BASE_URL</stringProp>
+              <stringProp name="Argument.value">localhost</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="BASE_PORT" elementType="Argument">
+              <stringProp name="Argument.name">BASE_PORT</stringProp>
+              <stringProp name="Argument.value">9000</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="SUCCESS_CODE" elementType="Argument">
+              <stringProp name="Argument.name">SUCCESS_CODE</stringProp>
+              <stringProp name="Argument.value">200</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="NOT_FOUND_CODE" elementType="Argument">
+              <stringProp name="Argument.name">NOT_FOUND_CODE</stringProp>
+              <stringProp name="Argument.value">404</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="JSON_NAME_PATH" elementType="Argument">
+              <stringProp name="Argument.name">JSON_NAME_PATH</stringProp>
+              <stringProp name="Argument.value">$.name</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="JSON_ERROR_PATH" elementType="Argument">
+              <stringProp name="Argument.name">JSON_ERROR_PATH</stringProp>
+              <stringProp name="Argument.value">$.error</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="JSON_GENDER_PATH" elementType="Argument">
+              <stringProp name="Argument.name">JSON_GENDER_PATH</stringProp>
+              <stringProp name="Argument.value">$.gender</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PERSON_URL" elementType="Argument">
+              <stringProp name="Argument.name">PERSON_URL</stringProp>
+              <stringProp name="Argument.value">person</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="INTERNAL_SERVER_ERROR_CODE" elementType="Argument">
+              <stringProp name="Argument.name">INTERNAL_SERVER_ERROR_CODE</stringProp>
+              <stringProp name="Argument.value">500</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${BASE_URL}</stringProp>
+          <stringProp name="HTTPSampler.port">${BASE_PORT}</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="CREATE" enabled="true">
+          <stringProp name="ForeachController.inputVal">INSERT_NAME</stringProp>
+          <stringProp name="ForeachController.returnVal">INSERT_VAR</stringProp>
+          <boolProp name="ForeachController.useSeparator">true</boolProp>
+        </ForeachController>
+        <hashTree>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">CREATE_IDX</stringProp>
+            <stringProp name="CounterConfig.format">0</stringProp>
+            <boolProp name="CounterConfig.per_user">false</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="CREATE REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body">{
+  &quot;name&quot;: &quot;${INSERT_VAR}&quot;,
+  &quot;gender&quot;: &quot;${__V(INSERT_GENDER_${CREATE_IDX})}&quot;
+}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}</stringProp>
+            <stringProp name="RestSampler.port_number">8080</stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="CREATE 500" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="RestSampler.request_body">{
+  &quot;surname&quot;: &quot;dbc&quot;
+}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <stringProp name="RestSampler.base_host"></stringProp>
+          <stringProp name="RestSampler.resource">${PERSON_URL}</stringProp>
+          <stringProp name="RestSampler.port_number">8080</stringProp>
+          <stringProp name="RestSampler.request_headers"></stringProp>
+        </com.atlantbh.jmeter.plugins.rest.RestSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT INTERNAL SERVER ERROR CODE" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1383447976">${INTERNAL_SERVER_ERROR_CODE}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="GET ALL #1" enabled="true"/>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="GET ALL REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <BSFPostProcessor guiclass="TestBeanGUI" testclass="BSFPostProcessor" testname="BSF PostProcessor" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">eval(&apos;var JSonResponse = &apos; + prev.getResponseDataAsString());
+
+for (var counter = 1; counter &lt;= JSonResponse.length; counter += 1) {
+    vars.put(&quot;PERSON_ID_&quot; + counter, JSonResponse[counter - 1].id);
+    vars.put(&quot;PERSON_NAME_&quot; + counter, JSonResponse[counter - 1].name);
+    vars.put(&quot;PERSON_GENDER_&quot; + counter, JSonResponse[counter - 1].gender);
+}</stringProp>
+              <stringProp name="scriptLanguage">javascript</stringProp>
+            </BSFPostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="GET" enabled="true">
+          <stringProp name="ForeachController.inputVal">PERSON_ID</stringProp>
+          <stringProp name="ForeachController.returnVal">GET_ID</stringProp>
+          <boolProp name="ForeachController.useSeparator">true</boolProp>
+        </ForeachController>
+        <hashTree>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">GET_IDX</stringProp>
+            <stringProp name="CounterConfig.format">0</stringProp>
+            <boolProp name="CounterConfig.per_user">true</boolProp>
+            <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="GET REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}/${GET_ID}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON NAME EXTRACTOR" enabled="true">
+              <stringProp name="VAR">JSON_NAME_VALUE</stringProp>
+              <stringProp name="JSONPATH">${JSON_NAME_PATH}</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT NAME" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1345275961">${__V(PERSON_NAME_${GET_IDX})}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+              <stringProp name="Assertion.scope">variable</stringProp>
+              <stringProp name="Scope.variable">JSON_NAME_VALUE</stringProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON GENDER EXTRACTOR" enabled="true">
+              <stringProp name="VAR">JSON_GENDER_VALUE</stringProp>
+              <stringProp name="JSONPATH">${JSON_GENDER_PATH}</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT GENDER" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="302657425">${__V(PERSON_GENDER_${GET_IDX})}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+              <stringProp name="Assertion.scope">variable</stringProp>
+              <stringProp name="Scope.variable">JSON_GENDER_VALUE</stringProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="GET 404" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="RestSampler.request_body"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+          <stringProp name="RestSampler.base_host"></stringProp>
+          <stringProp name="RestSampler.resource">${PERSON_URL}/${GET_IDX}</stringProp>
+          <stringProp name="RestSampler.port_number"></stringProp>
+          <stringProp name="RestSampler.request_headers"></stringProp>
+        </com.atlantbh.jmeter.plugins.rest.RestSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT NOT FOUND CODE" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1731234864">${NOT_FOUND_CODE}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="UPDATE 500" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="RestSampler.request_body">{
+  &quot;surname&quot;: &quot;dbc&quot;
+}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <stringProp name="RestSampler.base_host"></stringProp>
+          <stringProp name="RestSampler.resource">${PERSON_URL}/${PERSON_ID_1}</stringProp>
+          <stringProp name="RestSampler.port_number"></stringProp>
+          <stringProp name="RestSampler.request_headers"></stringProp>
+        </com.atlantbh.jmeter.plugins.rest.RestSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT INTERNAL SERVER ERROR CODE" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1383447976">${INTERNAL_SERVER_ERROR_CODE}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="UPDATE" enabled="true">
+          <stringProp name="ForeachController.inputVal">PERSON_ID</stringProp>
+          <stringProp name="ForeachController.returnVal">UPDATE_ID</stringProp>
+          <boolProp name="ForeachController.useSeparator">true</boolProp>
+        </ForeachController>
+        <hashTree>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">UPDATE_IDX</stringProp>
+            <stringProp name="CounterConfig.format">0</stringProp>
+            <boolProp name="CounterConfig.per_user">true</boolProp>
+            <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="UPDATE REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body">{
+  &quot;name&quot;: &quot;${__V(UPDATE_NAME_${UPDATE_IDX})}&quot;,
+  &quot;gender&quot;: &quot;${__V(UPDATE_GENDER_${UPDATE_IDX})}&quot;
+}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}/${UPDATE_ID}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="GET REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}/${UPDATE_ID}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON NAME EXTRACTOR" enabled="true">
+              <stringProp name="VAR">JSON_NAME_VALUE</stringProp>
+              <stringProp name="JSONPATH">${JSON_NAME_PATH}</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT NAME" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="484413004">${__V(UPDATE_NAME_${UPDATE_IDX})}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+              <stringProp name="Assertion.scope">variable</stringProp>
+              <stringProp name="Scope.variable">JSON_NAME_VALUE</stringProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON GENDER EXTRACTOR" enabled="true">
+              <stringProp name="VAR">JSON_GENDER_VALUE</stringProp>
+              <stringProp name="JSONPATH">${JSON_GENDER_PATH}</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT GENDER" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1052899138">${__V(UPDATE_GENDER_${UPDATE_IDX})}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+              <stringProp name="Assertion.scope">variable</stringProp>
+              <stringProp name="Scope.variable">JSON_GENDER_VALUE</stringProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="UPDATE 404" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="RestSampler.request_body">{ }</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <stringProp name="RestSampler.base_host"></stringProp>
+          <stringProp name="RestSampler.resource">${PERSON_URL}/${UPDATE_IDX}</stringProp>
+          <stringProp name="RestSampler.port_number"></stringProp>
+          <stringProp name="RestSampler.request_headers"></stringProp>
+        </com.atlantbh.jmeter.plugins.rest.RestSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT NOT FOUND CODE" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1731234864">${NOT_FOUND_CODE}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="DELETE" enabled="true">
+          <stringProp name="ForeachController.inputVal">PERSON_ID</stringProp>
+          <stringProp name="ForeachController.returnVal">DELETE_ID</stringProp>
+          <boolProp name="ForeachController.useSeparator">true</boolProp>
+        </ForeachController>
+        <hashTree>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end"></stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">DELETE_IDX</stringProp>
+            <stringProp name="CounterConfig.format">0</stringProp>
+            <boolProp name="CounterConfig.per_user">true</boolProp>
+            <boolProp name="CounterConfig.reset_on_tg_iteration">true</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-type</stringProp>
+                <stringProp name="Header.value">text/plain</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="DELETE REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body"></stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}/${DELETE_ID}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="DELETE 404" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="RestSampler.request_body"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+          <stringProp name="RestSampler.base_host"></stringProp>
+          <stringProp name="RestSampler.resource">${PERSON_URL}/${DELETE_IDX}</stringProp>
+          <stringProp name="RestSampler.port_number"></stringProp>
+          <stringProp name="RestSampler.request_headers"></stringProp>
+        </com.atlantbh.jmeter.plugins.rest.RestSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT NOT FOUND CODE" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1731234864">${NOT_FOUND_CODE}</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="GET ALL #2" enabled="true"/>
+        <hashTree>
+          <com.atlantbh.jmeter.plugins.rest.RestSampler guiclass="com.atlantbh.jmeter.plugins.rest.gui.RestGui" testclass="com.atlantbh.jmeter.plugins.rest.RestSampler" testname="GET ALL REQUEST" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="RestSampler.request_body"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <stringProp name="RestSampler.base_host"></stringProp>
+            <stringProp name="RestSampler.resource">${PERSON_URL}</stringProp>
+            <stringProp name="RestSampler.port_number"></stringProp>
+            <stringProp name="RestSampler.request_headers"></stringProp>
+          </com.atlantbh.jmeter.plugins.rest.RestSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT SUCCESS CODE" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1660903773">${SUCCESS_CODE}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="ASSERT EMPTY LIST" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="2914">[]</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
