@@ -28,6 +28,7 @@ public class AbstractPage {
         WebElement element = driver.findElement(locator);
 
         if (element != null) {
+            element.clear();
             element.sendKeys(charSequence);
         }
     }
@@ -60,5 +61,16 @@ public class AbstractPage {
         }
 
         return list;
+    }
+
+    public int getTableRowCount(By locator) {
+        WebElement element = driver.findElement(locator);
+        int size = 0;
+
+        if (element != null) {
+            size = element.findElement(tagName("tbody")).findElements(tagName("tr")).size();
+        }
+
+        return size;
     }
 }
