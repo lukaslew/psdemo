@@ -11,7 +11,8 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     javaCore,
     javaJdbc,
-    javaEbean
+    javaEbean,
+    "org.seleniumhq.selenium" % "selenium-firefox-driver" % "2.33.0"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
