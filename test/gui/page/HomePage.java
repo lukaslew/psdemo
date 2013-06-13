@@ -3,6 +3,8 @@ package gui.page;
 import models.Gender;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -31,24 +33,47 @@ public class HomePage extends AbstractPage {
         return driver.findElement(id(PERSON_TABLE)).isDisplayed();
     }
 
+    public void addPerson(String name, Gender gender) {
+        fillForm(name, gender);
+        click(id(PERSON_FORM_SUBMIT));
+    }
+
     public void editPerson(int idx) {
         WebElement element = driver.findElement(id(PERSON_TABLE));
+        List<WebElement> rows = element.findElement(tagName("tbody")).findElements(tagName("tr"));
 
-        if (element != null) {
-            List<WebElement> rows = element.findElement(tagName("tbody")).findElements(tagName("tr"));
+        if (isNotEmpty(rows)) {
+            WebElement row = rows.get(idx);
+            List<WebElement> cells = row.findElements(tagName("td"));
 
-            if (isNotEmpty(rows)) {
-                WebElement row = rows.get(idx);
-                List<WebElement> cells = row.findElements(tagName("td"));
+            if (isNotEmpty(cells)) {
+                WebElement last = cells.get(cells.size() - 1);
+                WebElement edit = last.findElement(className("btn-warning"));
+                edit.click();
+            }
+        }
+    }
 
-                if (isNotEmpty(cells)) {
-                    WebElement last = cells.get(cells.size() - 1);
-                    WebElement edit = last.findElement(className("btn-warning"));
+    public void deletePerson(int idx) {
+        WebElement element = driver.findElement(id(PERSON_TABLE));
+        List<WebElement> rows = element.findElement(tagName("tbody")).findElements(tagName("tr"));
 
-                    if (edit != null) {
-                        edit.click();
-                    }
-                }
+        if (isNotEmpty(rows)) {
+            WebElement row = rows.get(idx);
+            List<WebElement> cells = row.findElements(tagName("td"));
+
+            if (isNotEmpty(cells)) {
+                WebElement last = cells.get(cells.size() - 1);
+                WebElement edit = last.findElement(className("btn-danger"));
+
+                edit.click();
+
+                new WebDriverWait(driver, ONE_MINUTE).until(
+                        ExpectedConditions.visibilityOfElementLocated(className("bootbox"))
+                );
+
+                WebElement modal = driver.findElement(className("bootbox"));
+                modal.findElement(className("modal-footer")).findElement(className("btn-primary")).click();
             }
         }
     }

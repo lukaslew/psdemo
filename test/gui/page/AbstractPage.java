@@ -11,6 +11,8 @@ import static org.apache.commons.collections.CollectionUtils.isNotEmpty;
 import static org.openqa.selenium.By.tagName;
 
 public class AbstractPage {
+    public static final int ONE_MINUTE = 60;
+
     protected WebDriver driver;
 
     public AbstractPage(WebDriver driver) {
@@ -26,19 +28,13 @@ public class AbstractPage {
 
     public void input(By locator, CharSequence charSequence) {
         WebElement element = driver.findElement(locator);
-
-        if (element != null) {
             element.clear();
             element.sendKeys(charSequence);
-        }
     }
 
     public void click(By locator) {
         WebElement element = driver.findElement(locator);
-
-        if (element != null) {
             element.click();
-        }
     }
 
     public List<String> getTableRow(By locator, int idx) {
@@ -65,12 +61,6 @@ public class AbstractPage {
 
     public int getTableRowCount(By locator) {
         WebElement element = driver.findElement(locator);
-        int size = 0;
-
-        if (element != null) {
-            size = element.findElement(tagName("tbody")).findElements(tagName("tr")).size();
-        }
-
-        return size;
+        return element.findElement(tagName("tbody")).findElements(tagName("tr")).size();
     }
 }

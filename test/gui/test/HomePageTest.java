@@ -15,6 +15,7 @@ import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
 
+import static gui.page.AbstractPage.ONE_MINUTE;
 import static gui.page.HomePage.PERSON_FORM_SUBMIT;
 import static gui.page.HomePage.PERSON_GENDER_RADIO_HELP;
 import static gui.page.HomePage.PERSON_NAME_INPUT_HELP;
@@ -36,11 +37,10 @@ public class HomePageTest {
     private static final Person LEIA = new Person("Leia", Gender.FEMALE);
     private static final Person HAN_SOLO = new Person("Han Solo", Gender.MALE);
 
-    private static final int ONE_MINUTE = 60;
     private static final String URL = "http://localhost:3333";
 
     @Test
-    public void shouldAddPerson() {
+    public void shouldCreatePerson() {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), FIREFOX, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) throws Throwable {
                 browser.goTo(URL);
@@ -69,7 +69,7 @@ public class HomePageTest {
     }
 
     @Test
-    public void shouldEditPerson() {
+    public void shouldUpdatePerson() {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), FIREFOX, new Callback<TestBrowser>() {
             @Override
             public void invoke(TestBrowser browser) throws Throwable {
@@ -82,14 +82,12 @@ public class HomePageTest {
                 for (int i = 0; i < people.size(); i++) {
                     Person p = people.get(i);
 
-                    homePage.fillForm(p.getName(), p.getGender());
-                    homePage.click(id(PERSON_FORM_SUBMIT));
-
+                    homePage.addPerson(p.getName(), p.getGender());
                     wait.until(new TableRowCountPredicate(homePage, i + 1));
                 }
 
                 assertThat(homePage.isTableDisplayed()).isTrue();
-                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(3);
+                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(people.size());
 
                 for (int i = 0; i < people.size(); ++i) {
                     assertTableRow(homePage, i, people.get(i));
@@ -100,9 +98,48 @@ public class HomePageTest {
                 homePage.fillForm(HAN_SOLO.getName(), HAN_SOLO.getGender());
                 homePage.click(id(PERSON_FORM_SUBMIT));
 
-                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(3);
-
                 people = Arrays.asList(DARTH_VADER, LUKE, HAN_SOLO);
+
+                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(people.size());
+
+                for (int i = 0; i < people.size(); ++i) {
+                    assertTableRow(homePage, i, people.get(i));
+                }
+            }
+        });
+    }
+
+    @Test
+    public void shouldDeletePerson() {
+        running(testServer(3333, fakeApplication(inMemoryDatabase())), FIREFOX, new Callback<TestBrowser>() {
+            @Override
+            public void invoke(TestBrowser browser) throws Throwable {
+                browser.goTo(URL);
+
+                final HomePage homePage = new HomePage(browser.getDriver());
+                WebDriverWait wait = new WebDriverWait(browser.getDriver(), ONE_MINUTE);
+                List<Person> people = Arrays.asList(DARTH_VADER, LUKE, LEIA, HAN_SOLO);
+
+                for (int i = 0; i < people.size(); i++) {
+                    Person p = people.get(i);
+
+                    homePage.addPerson(p.getName(), p.getGender());
+                    wait.until(new TableRowCountPredicate(homePage, i + 1));
+                }
+
+                assertThat(homePage.isTableDisplayed()).isTrue();
+                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(people.size());
+
+                for (int i = 0; i < people.size(); ++i) {
+                    assertTableRow(homePage, i, people.get(i));
+                }
+
+                homePage.deletePerson(0);
+
+                people = Arrays.asList(LUKE, LEIA, HAN_SOLO);
+
+                assertThat(homePage.getTableRowCount(id(PERSON_TABLE))).isEqualTo(people.size());
+
                 for (int i = 0; i < people.size(); ++i) {
                     assertTableRow(homePage, i, people.get(i));
                 }
@@ -134,7 +171,7 @@ public class HomePageTest {
 
         @Override
         public boolean equals(@Nullable Object o) {
-            return true;
+            return super.equals(o);
         }
     }
 
